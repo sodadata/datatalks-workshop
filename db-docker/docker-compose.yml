@@ -1,0 +1,18 @@
+services:
+  demo-src-db:
+    build: demo-src-db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=source
+      - POSTGRES_DB=srcdb
+      - POSTGRES_PASSWORD=gsRABSy6xvWsSTE3
+
+  demo-target-db:
+    build: demo-target-db
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_USER=target
+      - POSTGRES_DB=targetdb
+      - POSTGRES_PASSWORD=hTv6T7tSWdrJ8sH7
