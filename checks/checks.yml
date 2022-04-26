@@ -1,7 +1,16 @@
 checks for CUSTOMERS:
-  # - row_count:
-  #   fail: when < 300
-  #   warn: when between 100 and 200
+  - schema:
+      fail:
+        when required column missing:
+          - id
+          - name
+        when forbidden column present:
+          - email_address
+          - password_hash
+        when wrong column type:
+          id: varchar
+
+  - row_count > 0
 
   - missing_count(pct) = 3:
     missing values: ["N/A", "No value"]
