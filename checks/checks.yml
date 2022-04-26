@@ -1,9 +1,13 @@
 checks for CUSTOMERS:
-  - row_count:
-    fail: when < 300
-    warn: when between 100 and 200
+  # - row_count:
+  #   fail: when < 300
+  #   warn: when between 100 and 200
 
   - missing_count(pct) = 3:
     missing values: ["N/A", "No value"]
 
-  - missing_count(size) = 0
+  - duplicate_count(id) = 0
+  - invalid_percent(pct) < 10 %:
+      missing values: ["N/A", "No value"]
+      valid format: percentage
+      valid length: 4
