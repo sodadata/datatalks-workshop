@@ -16,7 +16,7 @@ soda-core-postgres` and verify that soda command works as expected.
 ➜ soda
 Usage: soda [OPTIONS] COMMAND [ARGS]...
 
-  Soda Core CLI version 3.0.0b8
+  Soda Core CLI version 3.0.0b9
 
 Options:
   --help  Show this message and exit.
